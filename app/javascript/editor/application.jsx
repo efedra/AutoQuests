@@ -3,7 +3,7 @@ import * as ReactDOM from "react-dom";
 
 
 const App = (props) => {
-    return <div>{`Hello, ${props.name}!`}</div>;
+    return <div className='font-medium text-gray-500 hover:text-gray-900'>{`Hello, ${props.name}!`}</div>;
     };
 
 document.addEventListener("DOMContentLoaded", () => {
