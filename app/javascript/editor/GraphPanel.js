@@ -4,7 +4,7 @@ import GraphConfig from './GraphConfig.json'
 import {toast} from "react-toastify";
 import {observer} from "mobx-react";
 
-@observer class GraphPanel extends React.Component {
+class GraphPanel extends React.Component {
 
     //TODO переписать все методы из his.props.onChange в this.props.store
     constructor(props) {
@@ -134,4 +134,4 @@ import {observer} from "mobx-react";
     }
 }
 
-export default GraphPanel
+export default observer(GraphPanel);

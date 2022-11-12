@@ -2,7 +2,8 @@ import resolve from "@rollup/plugin-node-resolve"
 import babel from '@rollup/plugin-babel'
 import commonjs from "@rollup/plugin-commonjs";
 import replace from '@rollup/plugin-replace';
-
+import json from '@rollup/plugin-json'
+import scss from 'rollup-plugin-scss'
 export default {
   input: "app/javascript/application.js",
   output: {
@@ -22,6 +23,8 @@ export default {
       presets: ["@babel/preset-react"],
       babelHelpers: "bundled",
     }),
+    json(),
+    scss(),
     commonjs()
   ]
 }

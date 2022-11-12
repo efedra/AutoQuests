@@ -3,7 +3,7 @@ import BuildFieldSet from "./BuildFieldSet.js";
 import {observer} from "mobx-react";
 import {action} from "mobx";
 
-@observer class Editor extends React.Component {
+class Editor extends React.Component {
 
     constructor(props) {
         super(props);
@@ -55,4 +55,4 @@ import {action} from "mobx";
 
 }
 
-export default Editor
+export default observer(Editor);

@@ -1,7 +1,7 @@
 import React from "react";
 import {observer} from "mobx-react";
 
-@observer class State extends React.Component{
+class State extends React.Component {
 
     render() {
         const that = this
@@ -27,5 +27,5 @@ import {observer} from "mobx-react";
 
 };
 
-export default State
+export default observer(State);
 
