@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+Quest.create(name: "The Game Example", story: {
+  nodes: [{text: 'Вы находитесь тут', id: 1}, {text: 'Вы прошли игру', id: 2}],
+
+  links: [{from: 1, to: 2, id: 1, text: 'Налево'}, {from: 1, to: 2,  id: 2, text: 'Направо'}]
+})
+
+Quest.create(name: "The Game Example 2", story: {
+  nodes: [{text: 'Вы находитесь тут', id: 1}, {text: 'Вы прошли игру', id: 2}],
+
+  links: [{from: 1, to: 2, id: 1, text: 'Налево'}, {from: 1, to: 2,  id: 2, text: 'Направо'}]
+})

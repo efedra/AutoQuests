@@ -2,19 +2,19 @@ Arguments:
   C:\Program Files\nodejs\node.exe C:\Users\ogane\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js watch:css
 
 PATH: 
-  C:\Ruby31-x64\bin;C:\Ruby31-x64\bin;C:\Users\ogane\.gem\ruby\3.1.0\bin;C:\Python311\Scripts\;C:\Python311\;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.5\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.5\libnvvp;C:\Python39\Scripts\;C:\Python39\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\ProgramData\chocolatey\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files\Memurai\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\Nsight Compute 2021.3.0\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Git\cmd;D:\Program Files\MATLAB\R2022a\runtime\win64;D:\Program Files\MATLAB\R2022a\bin;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Ruby31-x64\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\ogane\.windows-build-tools\python27\;C:\Users\ogane\AppData\Local\Microsoft\WindowsApps;C:\Users\ogane\.windows-build-tools\python27\python.exe;C:\Users\ogane\AppData\Local\Microsoft\WindowsApps;C:\Users\ogane\AppData\Local\Programs\Microsoft VS Code\bin;D:\Tools;C:\Program Files\heroku\bin;C:\texlive\2021\bin\win32;C:\Program Files\OpenVPN\bin;C:\Users\ogane\.dotnet\tools;;C:\Users\ogane\AppData\Local\JetBrains\Toolbox\scripts;C:\Users\ogane\.fly\bin;C:\Users\ogane\AppData\Roaming\npm
+  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\ogane\bin;C:\Program Files\Eclipse Adoptium\jdk-11.0.17.8-hotspot\bin;C:\Python311\Scripts;C:\Python311;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.5\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.5\libnvvp;C:\Python39\Scripts;C:\Python39;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\ProgramData\chocolatey\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn;C:\Program Files\dotnet;C:\Program Files\Memurai;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\NVIDIA Corporation\Nsight Compute 2021.3.0;C:\Program Files\Microsoft SQL Server\120\Tools\Binn;C:\Program Files\Git\cmd;D:\Program Files\MATLAB\R2022a\runtime\win64;D:\Program Files\MATLAB\R2022a\bin;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn;C:\Program Files\Microsoft SQL Server\150\Tools\Binn;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\nodejs;C:\Users\ogane\AppData\Local\Programs\Python\Python310\Scripts;C:\Users\ogane\AppData\Local\Programs\Python\Python310;C:\Ruby31-x64\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin;C:\Users\ogane\.windows-build-tools\python27;C:\Users\ogane\AppData\Local\Microsoft\WindowsApps;C:\Users\ogane\.windows-build-tools\python27\python.exe;C:\Users\ogane\AppData\Local\Microsoft\WindowsApps;C:\Users\ogane\AppData\Local\Programs\Microsoft VS Code\bin;D:\Tools;C:\Program Files\heroku\bin;C:\texlive\2021\bin\win32;C:\Program Files\OpenVPN\bin;C:\Users\ogane\.dotnet\tools;C:\Users\ogane\AppData\Local\JetBrains\Toolbox\scripts;C:\Users\ogane\.fly\bin;C:\Users\ogane\AppData\Roaming\npm;C:\Users\ogane\.dotnet\tools;D:\Code\autoquests\node_modules\.bin
 
 Yarn version: 
   1.22.10
 
 Node version: 
-  18.12.0
+  18.12.1
 
 Platform: 
   win32 x64
 
 Trace: 
-  SyntaxError: D:\Code\autoquests\package.json: Unexpected token } in JSON at position 968
+  SyntaxError: D:\Code\autoquests\package.json: Unexpected token } in JSON at position 647
       at JSON.parse (<anonymous>)
       at C:\Users\ogane\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:1625:59
       at Generator.next (<anonymous>)
@@ -25,7 +25,7 @@ npm manifest:
   {
     "name": "app",
     "private": "true",
-    "type": "commonjs",
+    "type": "module",
     "scripts": {
       "build": "rollup -c rollup.config.js",
       "build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css --minify",
@@ -35,20 +35,12 @@ npm manifest:
     "dependencies": {
       "@hotwired/stimulus": "^3.1.0",
       "@hotwired/turbo-rails": "^7.2.4",
-      "@rollup/plugin-node-resolve": "^15.0.1",
-      "mobx": "^6.6.2",
-      "mobx-react": "^7.5.3",
-      "react": "^18.2.0",
-      "react-dom": "^18.2.0",
-      "rollup": "^3.2.3"
+      "tailwindcss": "^3.2.7",
+      "@tailwindcss/forms": "^0.5.0"
     },
     "devDependencies": {
-      "@babel/plugin-syntax-decorators": "^7.19.0",
-      "@babel/preset-react": "^7.18.6",
-      "@rollup/plugin-babel": "^6.0.2",
-      "@rollup/plugin-commonjs": "^23.0.2",
-      "@rollup/plugin-replace": "^5.0.1",
-      "tailwindcss": "^3.2.1",
+      "parcel": "^2.8.2",
+  
     }
   }
 
