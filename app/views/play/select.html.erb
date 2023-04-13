@@ -1,13 +1,26 @@
-<div>
-  <%= @node_text %>
-</div>
+<div class=" h-screen bg-white flex flex-row">
+  <div class="w-4/5">
+    <header class="border-b-2 border-b-[#16354D] ">
+      <h1 class="font-sans font-medium text-3xl text-[#16354D] py-2 px-4">AutoQuests</h1>
+    </header>
 
-<%- @links.each do |link| %>
-  <div>
+    <div class=" flex flex-col">
+      <div>
+        <%= @node_text %>
+      </div>
 
-
-  <%=  link_to link['text'],
-               "/play/#{@quest_session.code}/select/#{link['id']}",
-               class:"rounded-md bg-white font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"  %>
+      <div class="mt-auto">
+        <%- @links.each do |link| %>
+          <div >
+            <%= link_to link['text'],
+                        "/play/#{@quest_session.code}/select/#{link['id']}",
+                        class: "rounded-md bg-white font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
-<% end %>
+  <div class="w-1/5 bg-[#16354D]">
+
+  </div>
+</div>
