@@ -5,9 +5,8 @@ class PlayController < ApplicationController
   def start
     @quest_session = QuestSession.find_by_code(params[:code])
 
-    @link = @quest_session.quest.story['links'].find {|x| x['from'] == 1}
     @node_text = @quest_session.quest.story['nodes'].find {|x| x['id'].to_i == @quest_session.current_node}['text']
-    @links = @quest_session.quest.story['links']
+    @links = @quest_session.quest.story['links'].select {|x| x['from'] == 1}
     @node_image_url = "https://placekitten.com/g/640/480"
     render 'select'
   end
