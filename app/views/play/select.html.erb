@@ -1,32 +1,31 @@
-<div class=" h-screen bg-white flex flex-row box-border">
-  <div class="w-4/5 h-screen flex flex-col">
+<div class=" h-screen bg-white flex flex-row box-border outline-red-600 outline-2">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" /> <!-- font awesome -->
+  <div class="w-4/5  flex flex-col h-full">
+    <!--header-->
     <header class="border-b-2 border-b-[#16354D] flex items-center">
-      <h1 class="font-sans font-medium text-3xl text-[#16354D] py-2 px-4 "><-</h1>
+      <i class="fa-solid fa-arrow-left text-[#16354D] text-4xl py-2 px-4"></i>
       <hr class="border-r-2 border-r-[#16354D] h-3/5">
     </header>
-
-    <div class="flex flex-col h-full">
-      <div class="mx-5  my-6 h-3/5 overflow-hidden">
+    <!--Node-->
+    <div class="flex flex-col h-4/6">
+      <div class="mx-5  my-6  overflow-hidden">
         <%= @node_text %>
           <%= image_tag @node_image_url, class: "object-contain w-full h-full" %>
       </div>
-
-      <div class="mt-auto h-2/5">
-        <ol class="border-t-2 border-t-[#16354D] overflow-y-auto max-h-[15.9rem]">
-          <%- @links.each do |link| %>
-            <li class=" h-11  mx-5 first:mt-7 my-3 even:bg-[#E4E5EA] rounded-xl">
-              <%= link_to link['text'],
-                          "/play/#{@quest_session.code}/select/#{link['id']}",
-                          class: "flex w-auto h-full rounded-xl items-center pl-6
+    </div>
+    <!--Link-->
+    <ol class=" mt-auto h-2/5 border-t-2 border-t-[#16354D] overflow-y-auto max-h-[15.9rem]
+    scrollbar-thin scrollbar-thumb-gray-300 scrollbar-thumb-rounded-full hover:scrollbar-thumb-gray-400">
+      <%- @links.each do |link| %>
+        <li class=" h-11  mx-5 first:mt-4 my-3 even:bg-[#E4E5EA] rounded-xl">
+          <%= link_to link['text'],
+                      "/play/#{@quest_session.code}/select/#{link['id']}",
+                      class: "flex w-auto h-full rounded-xl items-center pl-6
                                 border-2 border-[#16354D] font-medium
                                 hover:text-cyan-600 hover:border-cyan-700 hover:font-bold " %>
-            </li>
-          <% end %>
-        </ol>
-      </div>
-
-
-    </div>
+        </li>
+      <% end %>
+    </ol>
   </div>
   <div class="w-1/5 bg-[#16354D]">
 
