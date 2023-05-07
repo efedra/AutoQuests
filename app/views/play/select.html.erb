@@ -13,7 +13,8 @@
       </div>
     </div>
     <!--Link-->
-    <ol class=" mt-auto h-2/5 border-t-2 border-t-[#16354D] overflow-y-auto max-h-[15.9rem]">
+    <ol class=" mt-auto h-2/5 border-t-2 border-t-[#16354D] overflow-y-auto max-h-[15.9rem]
+    scrollbar-thin scrollbar-thumb-gray-300 scrollbar-thumb-rounded-full hover:scrollbar-thumb-gray-400">
       <%- @links.each do |link| %>
         <li class=" h-11  mx-5 first:mt-4 my-3 even:bg-[#E4E5EA] rounded-xl">
           <%= link_to link['text'],
